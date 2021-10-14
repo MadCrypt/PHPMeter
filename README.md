@@ -1,21 +1,21 @@
-# AppGati
+# PHPMeter
 
 Based on the original [AppGati](https://github.com/fotuzlab/appgati), refactored to modern PHP.
 
 ## Installation
 ```console
-$ composer require --dev subiabre/appgati
+$ composer require --dev vinay/phpmeter
 ```
 
 ## Usage
-AppGati allows you to easily gauge the performance of PHP script's.
+PHPMeter allows you to easily gauge the performance of PHP script's.
 
 ```php
 <?php
 
 include 'vendor/autoload';
 
-$app = new AppGati;
+$app = new PHPMeter;
 
 $app->step('start');
 
@@ -55,4 +55,4 @@ Array
 )
 ```
 
-AppGati works by creating snapshots of time and system information in a given moment, known as *steps*, and then comparing two different steps. By using AppGati you can easily track your application performance in several different moments in an easy fashion, but it's still nothing short of an authentic benchmark tool such as Xdebug profiling capabilities.
+PHPMeter works by creating snapshots of time and system information in a given moment, known as *steps*, and then comparing two different steps. By using PHPMeter you can easily track your application performance in several different moments in an easy fashion, but it's still nothing short of an authentic benchmark tool such as Xdebug profiling capabilities.
