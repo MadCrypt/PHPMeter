@@ -1,6 +1,7 @@
-# PHPMeter
+# PHPMeter - PHP performance testing tool
 
 A very simple package to check the performance of any PHP script.
+ 
 
 ## Installation
 ```console
