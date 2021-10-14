@@ -10,10 +10,16 @@ $ composer require --dev vinay/phpmeter
 ## Usage
 PHPMeter allows you to easily gauge the performance of PHP script's.
 
+
+
 ```php
 <?php
 
 include 'vendor/autoload';
+
+// OR
+
+use PHPMeter;
 
 $app = new PHPMeter;
 
