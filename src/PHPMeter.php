@@ -131,14 +131,14 @@ class PHPMeter
         $memoryPeak = $this->getMemoryPeak();
         
      
-        $report['clock_time_in_seconds'] = $time;
-        $report['time_taken_in_user_mode_in_seconds'] = $usage['ru_utime.tv'] ?? 'Not Available';
-        $report['time_taken_in_system_mode_in_seconds'] = $usage['ru_stime.tv'] ?? 'Not Available';
-        $report['total_time_taken_in_Kernel_in_seconds'] = $usage['ru_stime.tv'] + $usage['ru_utime.tv'];
+        $report['clock time in seconds'] = $time;
+        $report['Time taken in User Mode in seconds'] = $usage['ru_utime.tv'] ?? 'Not Available';
+        $report['Time taken in System Mode in seconds'] = $usage['ru_stime.tv'] ?? 'Not Available';
+        $report['Total time taken in Kernel in seconds'] = $usage['ru_stime.tv'] + $usage['ru_utime.tv'];
         
-        $report['memory_limit_in_mb'] = str_replace('M', '', ini_get('memory_limit'));
-        $report['memory_usage_in_mb'] = $memory / 1024 / 1024 ?? 'Not Available';
-        $report['peak_memory_usage_in_mb'] = $memoryPeak / 1024 / 1024 ?? 'Not Available';
+        $report['Memory limit in MB'] = str_replace('M', '', ini_get('memory_limit'));
+        $report['Memory usage in MB'] = $memory / 1024 / 1024 ?? 'Not Available';
+        $report['Peak memory usage in MB'] = $memoryPeak / 1024 / 1024 ?? 'Not Available';
         
         $report['Average server load in last minute'] = $load['0'];
         $report['Maximum resident shared size in KB'] = $usage['ru_maxrss'] ?? 'Not Available';
