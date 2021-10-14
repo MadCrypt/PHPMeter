@@ -1,6 +1,6 @@
 # PHPMeter
 
-Based on the original [AppGati](https://github.com/fotuzlab/appgati), refactored to modern PHP.
+A very simple package to check the performance of any PHP script.
 
 ## Installation
 ```console
