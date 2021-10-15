@@ -141,7 +141,7 @@ class PHPMeter
         $report['Clock time'] = $time;
         $report['Time taken in User Mode'] = $this->secToHR($usage['ru_utime.tv']) ?? 'Not Available';
         $report['Time taken in System Mode'] = $this->secToHR($usage['ru_stime.tv']) ?? 'Not Available';
-        $report['Total time taken in Kernel'] = $this->secToHR($usage['ru_stime.tv']) + $usage['ru_utime.tv'];
+        $report['Total time taken in Kernel'] = $this->secToHR($usage['ru_stime.tv'] + $usage['ru_utime.tv']);
         
         $report['Memory limit in MB'] = str_replace('M', '', ini_get('memory_limit'));
         $report['Memory usage in MB'] = $memory / 1024 / 1024 ?? 'Not Available';
