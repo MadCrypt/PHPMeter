@@ -121,7 +121,7 @@ class PHPMeter
         $hours = floor($seconds / 3600);
         $minutes = floor(($seconds / 60) % 60);
         $seconds = $seconds % 60;
-        return "$hours:$minutes:$seconds";
+        return $hours > 0 ? "$hours hours, $minutes minutes" : ($minutes > 0 ? "$minutes minutes, $seconds seconds" : "$seconds seconds");
       }
 
   
@@ -138,10 +138,10 @@ class PHPMeter
         $memoryPeak = $this->getMemoryPeak();
         $time = $this->secToHR($time);
      
-        $report['Time Taken'] = $time;
-        $report['Time taken in User Mode in seconds'] = $usage['ru_utime.tv'] ?? 'Not Available';
-        $report['Time taken in System Mode in seconds'] = $usage['ru_stime.tv'] ?? 'Not Available';
-        $report['Total time taken in Kernel in seconds'] = $usage['ru_stime.tv'] + $usage['ru_utime.tv'];
+        $report['Clock time'] = $time;
+        $report['Time taken in User Mode'] = $this->secToHR($usage['ru_utime.tv']) ?? 'Not Available';
+        $report['Time taken in System Mode'] = $this->secToHR($usage['ru_stime.tv']) ?? 'Not Available';
+        $report['Total time taken in Kernel'] = $this->secToHR($usage['ru_stime.tv']) + $usage['ru_utime.tv'];
         
         $report['Memory limit in MB'] = str_replace('M', '', ini_get('memory_limit'));
         $report['Memory usage in MB'] = $memory / 1024 / 1024 ?? 'Not Available';

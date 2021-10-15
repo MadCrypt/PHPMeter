@@ -39,10 +39,10 @@ Output:
 ```php
 Array
 (
-    ['Time Taken'] => 0:0:24
-    ['Time taken in User Mode in seconds'] => 0.676958
-    ['Time taken in System Mode in seconds'] => 13.680072
-    ['Total time taken in Kernel in seconds'] => 14.35703
+    ['Clock time'] => 0:0:24
+    ['Time taken in User Mode'] => 0:0:09
+    ['Time taken in System Mode'] => 0:0:24
+    ['Total time taken in Kernel'] => 0:0:24
     ['Memory limit in MB'] => -1
     ['Memory usage in MB'] => 0.002655029296875
     ['Peak memory usage in MB'] => 1.0958099365234
