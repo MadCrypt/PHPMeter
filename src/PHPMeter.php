@@ -117,6 +117,13 @@ class PHPMeter
         return $array;
     }
 
+    public  function secToHR($seconds) {
+        $hours = floor($seconds / 3600);
+        $minutes = floor(($seconds / 60) % 60);
+        $seconds = $seconds % 60;
+        return "$hours:$minutes:$seconds";
+      }
+
   
     public function getReport(string $primaryLabel, string $secondaryLabel): array
     {
@@ -129,7 +136,7 @@ class PHPMeter
         $usage = $this->getUsageDifference($primaryLabel, $secondaryLabel);
         $memory = $this->getMemoryDifference($primaryLabel, $secondaryLabel);
         $memoryPeak = $this->getMemoryPeak();
-        
+        $time = $this->secToHR($time);
      
         $report['Clock time in seconds'] = $time;
         $report['Time taken in User Mode in seconds'] = $usage['ru_utime.tv'] ?? 'Not Available';
