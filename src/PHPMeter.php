@@ -138,7 +138,7 @@ class PHPMeter
         $memoryPeak = $this->getMemoryPeak();
         $time = $this->secToHR($time);
      
-        $report['Clock time in seconds'] = $time;
+        $report['Time Taken'] = $time;
         $report['Time taken in User Mode in seconds'] = $usage['ru_utime.tv'] ?? 'Not Available';
         $report['Time taken in System Mode in seconds'] = $usage['ru_stime.tv'] ?? 'Not Available';
         $report['Total time taken in Kernel in seconds'] = $usage['ru_stime.tv'] + $usage['ru_utime.tv'];

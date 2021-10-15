@@ -39,7 +39,7 @@ Output:
 ```php
 Array
 (
-    ['Clock time in seconds'] => 14.363237142563
+    ['Time Taken'] => 0:0:24
     ['Time taken in User Mode in seconds'] => 0.676958
     ['Time taken in System Mode in seconds'] => 13.680072
     ['Total time taken in Kernel in seconds'] => 14.35703
